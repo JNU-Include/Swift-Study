@@ -1,5 +1,6 @@
 ### Swift Study
 
-IOS 11, X-code 9.4(beta)
+IOS 11, X-code 9.0(beta 4)
+
 
 
