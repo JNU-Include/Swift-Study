@@ -12,3 +12,16 @@ print(address)
 let interpolatedAddress = "\(country), \(province), \(city)"
 print(interpolatedAddress)
 let interpolatedStreetAddress = "\(streetNumber) \(street)"
+
+//Integers (Int)
+let favoriteProgrammingLanguage = "Swift"
+let year = 2014
+
+//Floating Point Numbers (Double / Float)
+var version = 3.1 //Double
+
+//Boolean
+let isFun = true //Bool
+
+
+
