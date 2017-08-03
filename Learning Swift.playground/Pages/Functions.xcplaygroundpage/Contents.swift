@@ -1,13 +1,18 @@
-/*
-함수 : 특정 작업을 수행하는 독립적인 코드 덩어리
+//Wall #1
+let width = 25
+let height = 7
+let area = width * height
 
-ex)
-커피 내리기
-1. 물을 끓인다
-2. 커피 콩을 간다
-3. 필터에 넣고 물을 흘려 보낸다
-4. 커피를 따뜻하게 유지시킨다
-...
+//Wall #2
+let secondWidth = 14
+let secondHeight = 3
+let secondArea = secondWidth * secondHeight
 
-DRY : Don't Repeat Yourself
-*/
+func calculateArea() {
+    let width = 25
+    let height = 7
+    let area = width * height
+    print(area)
+}
+
+calculateArea()
