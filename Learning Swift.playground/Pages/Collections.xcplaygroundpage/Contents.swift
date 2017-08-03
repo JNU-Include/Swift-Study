@@ -24,3 +24,16 @@ todo.insert("빨래하기", at: 2)
 todo.remove(at: 2)
 // 배열 숫자 확인
 todo.count
+
+//Dictionary
+
+/*
+ Airport Code       Airport Name
+ INC                Incheon
+ GMP                Gimpo
+ HKG                Hong Kong International
+ SFO                San Francisco International
+ LHR                Heathrow
+*/
+
+
