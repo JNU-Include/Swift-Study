@@ -25,6 +25,11 @@ todo.remove(at: 2)
 // 배열 숫자 확인
 todo.count
 
+//값이 없을 때 에러 발생
+//let lastItem = todo[6]
+
+
+
 //Dictionary
 
 /*
@@ -54,10 +59,10 @@ airportCodes.updateValue("Gimpo", forKey: "GMP")
 //Removing
 airportCodes["SYD"] = nil
 airportCodes.removeValue(forKey: "LHR")
-airportCodes
 
-
-
+let incheonAirport = airportCodes["INC"]
+type(of: incheonAirport)
+let abcAirport = airportCodes["ABC"]
 
 
 
