@@ -41,6 +41,18 @@ while counter < 1 {
     print("Inside while loop!")
 }
 
+// If 조건문
+
+var temperature = 9
+
+if temperature < 12 {
+    print("날씨가 많이 춥습니다. 자켓을 꺼내세요!")
+} else if temperature < 17 {
+    print("날씨가 춥습니다. 스웨터를 입는 것은 어떨까요?")
+} else {
+    print("날씨가 좋네요.")
+}
+
 
 
 
