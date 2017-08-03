@@ -35,5 +35,46 @@ todo.count
  SFO                San Francisco International
  LHR                Heathrow
 */
+// Dictionary는 Array 처럼 순서가 일정하게 들어가지 않음. 즉, 저장 순서가 의미가 없을때만 사용할 것.
+var airportCodes: [String : String] = [
+    "INC" : "Inchoen",
+    "GMP" : "Gimpo",
+    "HKG" : "Hong Kong International",
+    "SFO" : "San Francisco International",
+    "LHR" : "Hearthrow"]
+
+//Reading
+let airportName = airportCodes["INC"]
+
+//Inserting
+airportCodes["SYD"] = "Sydney"
+airportCodes["GMP"] = "Gimpo International"
+airportCodes.updateValue("Gimpo", forKey: "GMP")
+
+//Removing
+airportCodes["SYD"] = nil
+airportCodes.removeValue(forKey: "LHR")
+airportCodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
