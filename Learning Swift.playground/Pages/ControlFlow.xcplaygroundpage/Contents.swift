@@ -43,7 +43,7 @@ while counter < 1 {
 
 // If 조건문
 
-var temperature = 9
+var temperature = 14
 
 if temperature < 12 {
     print("날씨가 많이 춥습니다. 자켓을 꺼내세요!")
@@ -52,6 +52,52 @@ if temperature < 12 {
 } else {
     print("날씨가 좋네요.")
 }
+
+// Logical Operator
+3 < 2 && "a" == "a"
+
+if temperature > 7 && temperature < 12 {
+    print("자켓과 함께 스카프토 챙기세요.")
+}
+
+var isRaining: Bool = true
+var isSnowing: Bool = false
+
+if isRaining || isSnowing {
+    print("부츠를 꺼내 신으세요.")
+}
+
+if !isRaining {
+    print("해가 떴습니다.")
+}
+
+if isRaining && isSnowing && temperature < 2 {
+    print("동상에 주의하세요.")
+}
+
+if (isRaining || isSnowing) && temperature < 2 {
+    print("외출은 자제하세요")
+}
+
+// Switch
+
+let airportCodes = ["INC", "GMP", "HKG", "SFO", "LHR"]
+
+let airport = airportCodes[0]
+
+for airportCode in airportCodes {
+    switch airportCode {
+    case "INC": print("Incheon Airport")
+    case "GMP": print("Gimpo Airport")
+    case "HKG": print("Hong Kong International")
+    case "SFO": print("San Francisco International")
+    case "LHR": print("Heathrow")
+    default: print("알 수 없는 공항 코드 입니다.")
+    }
+}
+
+
+
 
 
 
