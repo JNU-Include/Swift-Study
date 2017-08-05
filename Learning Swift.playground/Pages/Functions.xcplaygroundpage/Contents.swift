@@ -1,18 +1,27 @@
-//Wall #1
-let width = 25
-let height = 7
-let area = width * height
-
-//Wall #2
-let secondWidth = 14
-let secondHeight = 3
-let secondArea = secondWidth * secondHeight
-
-func calculateArea() {
-    let width = 25
-    let height = 7
+func calculateArea(width: Int, height: Int) -> Int {
     let area = width * height
-    print(area)
+    return area
 }
 
-calculateArea()
+// Wall # 1
+let areaOfWall1 = calculateArea(width: 10, height: 20)
+
+// Wall # 2
+calculateArea(width: 20, height: 1)
+
+//Hint : Double
+// C = (F-32) * 5 / 9
+
+func convertToCelsius(temperatureInFahrenheit temp : Double) -> Double {
+    let temperatureInCelsius = (temp-32) * (5/9)
+    return temperatureInCelsius
+}
+
+convertToCelsius(temperatureInFahrenheit: 80)
+
+
+func sayHello(to person: String, and anotherPerson: String) -> String {
+    return "Hello \(person) and \(anotherPerson)"
+}
+
+sayHello(to: "Jack", and: "Jenny")
