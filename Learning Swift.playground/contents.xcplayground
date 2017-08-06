@@ -9,5 +9,7 @@
         <page name='Functions'/>
         <page name='OOP'/>
         <page name='Inheritance'/>
+        <page name='Initialization'/>
+        <page name='Optional'/>
     </pages>
 </playground>
