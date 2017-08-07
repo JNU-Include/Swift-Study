@@ -1,5 +1,5 @@
 //
-//  MyFirstViewController.swift
+//  FirstViewController.swift
 //  Include AI
 //
 //  Created by 이민혁 on 2017. 8. 7..
@@ -8,12 +8,8 @@
 
 import UIKit
 
-class MyFirstViewController: UIViewController {
+class FirstViewController: UIViewController {
 
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myButton: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,10 +22,7 @@ class MyFirstViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        self.myLabel.text = "Include +_+"
-    }
-    @IBAction func switchChanged(_ sender: UISwitch) {
-        print("switch changed!")
+        self.performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
     
     /*
