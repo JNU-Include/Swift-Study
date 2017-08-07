@@ -11,5 +11,6 @@
         <page name='Inheritance'/>
         <page name='Initialization'/>
         <page name='Optional'/>
+        <page name='Protocol'/>
     </pages>
 </playground>
