@@ -167,9 +167,18 @@ SomeClass2.someTypeMethod()
 
 
 
+struct Person {
+    let firstName: String
+    let lastName: String
+    func fullName() -> String{
+        let fullName = "\(firstName) \(lastName)"
+        return fullName
+    }
+}
 
+let name = Person(firstName: "hello", lastName: "swi")
 
-
+print(name.fullName())
 
 
 
