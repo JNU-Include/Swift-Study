@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,7 +117,20 @@
                     <view key="view" contentMode="scaleToFill" id="w0i-kR-rTJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDM-SG-xLc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xDM-SG-xLc" secondAttribute="height" id="HCD-nf-gQc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xDM-SG-xLc" firstAttribute="leading" secondItem="y78-lj-KAM" secondAttribute="leading" id="Cet-MC-Fqx"/>
+                            <constraint firstItem="y78-lj-KAM" firstAttribute="trailing" secondItem="xDM-SG-xLc" secondAttribute="trailing" id="OfI-4B-fDi"/>
+                            <constraint firstItem="xDM-SG-xLc" firstAttribute="top" secondItem="y78-lj-KAM" secondAttribute="top" id="xz5-au-K3U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y78-lj-KAM"/>
                     </view>
                     <navigationItem key="navigationItem" id="g7D-cV-Zw3">
@@ -126,10 +140,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectedImageView" destination="xDM-SG-xLc" id="AXH-bj-jDW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9E-9Y-6Xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="790"/>
+            <point key="canvasLocation" x="-730.39999999999998" y="789.35532233883066"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GQI-0N-VzM">
