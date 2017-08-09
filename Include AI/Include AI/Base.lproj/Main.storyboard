@@ -124,11 +124,29 @@
                                     <constraint firstAttribute="width" secondItem="xDM-SG-xLc" secondAttribute="height" id="HCD-nf-gQc"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJV-9Z-gdz">
+                                <rect key="frame" x="139" y="627" width="97.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in9-CY-sCz">
+                                <rect key="frame" x="16" y="571" width="343" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="y78-lj-KAM" firstAttribute="trailing" secondItem="in9-CY-sCz" secondAttribute="trailing" constant="16" id="2U8-C9-wbi"/>
                             <constraint firstItem="xDM-SG-xLc" firstAttribute="leading" secondItem="y78-lj-KAM" secondAttribute="leading" id="Cet-MC-Fqx"/>
                             <constraint firstItem="y78-lj-KAM" firstAttribute="trailing" secondItem="xDM-SG-xLc" secondAttribute="trailing" id="OfI-4B-fDi"/>
+                            <constraint firstItem="xJV-9Z-gdz" firstAttribute="top" secondItem="in9-CY-sCz" secondAttribute="bottom" constant="18" id="Vn8-Oa-fy1"/>
+                            <constraint firstItem="xJV-9Z-gdz" firstAttribute="centerX" secondItem="y78-lj-KAM" secondAttribute="centerX" id="esf-O0-Kpo"/>
+                            <constraint firstItem="y78-lj-KAM" firstAttribute="bottom" secondItem="xJV-9Z-gdz" secondAttribute="bottom" constant="16" id="nx0-Bp-IxT"/>
+                            <constraint firstItem="in9-CY-sCz" firstAttribute="centerX" secondItem="y78-lj-KAM" secondAttribute="centerX" id="oHs-6g-Cvq"/>
+                            <constraint firstItem="in9-CY-sCz" firstAttribute="leading" secondItem="y78-lj-KAM" secondAttribute="leading" constant="16" id="pLd-tg-lqd"/>
                             <constraint firstItem="xDM-SG-xLc" firstAttribute="top" secondItem="y78-lj-KAM" secondAttribute="top" id="xz5-au-K3U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y78-lj-KAM"/>
@@ -141,6 +159,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryLabel" destination="in9-CY-sCz" id="fMO-U7-kc0"/>
+                        <outlet property="confidenceLabel" destination="xJV-9Z-gdz" id="Ryi-5F-DkO"/>
                         <outlet property="selectedImageView" destination="xDM-SG-xLc" id="AXH-bj-jDW"/>
                     </connections>
                 </viewController>
