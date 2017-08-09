@@ -14,6 +14,7 @@
 		1435A33F1F3ADC8600A28B53 /* MainFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */; };
 		1435A3411F3ADE8D00A28B53 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435A3401F3ADE8D00A28B53 /* SampleData.swift */; };
 		14CD8E851F38911600192D34 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD8E841F38911600192D34 /* MainViewController.swift */; };
+		14F5D17B1F3AFEE30076F94A /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5D17A1F3AFEE30076F94A /* ObjectDetectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureCell.swift; sourceTree = "<group>"; };
 		1435A3401F3ADE8D00A28B53 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		14CD8E841F38911600192D34 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		14F5D17A1F3AFEE30076F94A /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		14312F0E1F38012E0039FB43 /* Include AI */ = {
 			isa = PBXGroup;
 			children = (
+				14F5D17E1F3AFF3E0076F94A /* Model */,
+				14F5D17D1F3AFF1F0076F94A /* Custom Views */,
+				14F5D17C1F3AFEF90076F94A /* View Controller */,
 				14312F0F1F38012E0039FB43 /* AppDelegate.swift */,
 				14312F131F38012E0039FB43 /* Main.storyboard */,
 				14312F161F38012E0039FB43 /* Assets.xcassets */,
 				14312F181F38012E0039FB43 /* LaunchScreen.storyboard */,
 				14312F1B1F38012E0039FB43 /* Info.plist */,
-				14CD8E841F38911600192D34 /* MainViewController.swift */,
-				1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */,
-				1435A3401F3ADE8D00A28B53 /* SampleData.swift */,
 			);
 			path = "Include AI";
+			sourceTree = "<group>";
+		};
+		14F5D17C1F3AFEF90076F94A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14CD8E841F38911600192D34 /* MainViewController.swift */,
+				14F5D17A1F3AFEE30076F94A /* ObjectDetectionViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		14F5D17D1F3AFF1F0076F94A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		14F5D17E1F3AFF3E0076F94A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1435A3401F3ADE8D00A28B53 /* SampleData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +171,7 @@
 				14312F101F38012E0039FB43 /* AppDelegate.swift in Sources */,
 				1435A33F1F3ADC8600A28B53 /* MainFeatureCell.swift in Sources */,
 				14CD8E851F38911600192D34 /* MainViewController.swift in Sources */,
+				14F5D17B1F3AFEE30076F94A /* ObjectDetectionViewController.swift in Sources */,
 				1435A3411F3ADE8D00A28B53 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
