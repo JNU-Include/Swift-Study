@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-Np-nmq">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainFeatureCell" rowHeight="90" id="Mw2-nA-CCx" customClass="MainFeatureCell" customModule="Include_AI" customModuleProvider="target">
@@ -96,7 +96,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzN-UV-9oy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="D6I-aU-Bg4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D6I-aU-Bg4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -109,16 +109,23 @@
             </objects>
             <point key="canvasLocation" x="-708" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Object Detection View Controller-->
         <scene sceneID="l5c-3L-jD5">
             <objects>
-                <viewController id="l9o-1L-z3s" sceneMemberID="viewController">
+                <viewController id="l9o-1L-z3s" customClass="ObjectDetectionViewController" customModule="Include_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0i-kR-rTJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="y78-lj-KAM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g7D-cV-Zw3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2PH-nM-c87">
+                            <connections>
+                                <action selector="addPhoto:" destination="l9o-1L-z3s" id="Fv1-iH-U4T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9E-9Y-6Xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
