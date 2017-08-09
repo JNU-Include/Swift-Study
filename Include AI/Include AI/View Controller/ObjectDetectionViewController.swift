@@ -10,8 +10,13 @@ import UIKit
 import Vision
 
 class ObjectDetectionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
+    
+    
     @IBOutlet weak var selectedImageView: UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
     var selectedImage: UIImage? {
         didSet {
             self.selectedImageView.image = selectedImage
@@ -29,6 +34,8 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.categoryLabel.text = ""
+        self.confidenceLabel.text = ""
 
         // Do any additional setup after loading the view.
     }
@@ -85,10 +92,9 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
         }
     }
     func handleObjectDetection(request: VNRequest, error: Error?){
-        if let results = request.results as? [VNClassificationObservation] {
-            for result in results {
-                print("\(result.identifier) : \(result.confidence)")
-            }
+        if let result = request.results?.first as? VNClassificationObservation {
+            self.categoryLabel.text = result.identifier
+            self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
         }
     }
 }
