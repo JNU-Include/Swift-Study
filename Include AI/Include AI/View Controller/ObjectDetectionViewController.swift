@@ -74,8 +74,9 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
         picker.dismiss(animated: true)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.selectedImage = uiImage
-            self.detectObject()
-            
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.detectObject()
+            }
         }
     }
     func detectObject(){
@@ -93,8 +94,10 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     }
     func handleObjectDetection(request: VNRequest, error: Error?){
         if let result = request.results?.first as? VNClassificationObservation {
-            self.categoryLabel.text = result.identifier
-            self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
+            DispatchQueue.main.async {
+                self.categoryLabel.text = result.identifier
+                self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
+            }
         }
     }
 }
