@@ -173,20 +173,35 @@
             </objects>
             <point key="canvasLocation" x="-730.39999999999998" y="789.35532233883066"/>
         </scene>
-        <!--View Controller-->
+        <!--Real Time Detection View Controller-->
         <scene sceneID="GQI-0N-VzM">
             <objects>
-                <viewController id="52o-7Y-5dn" sceneMemberID="viewController">
+                <viewController id="52o-7Y-5dn" customClass="RealTimeDetectionViewController" customModule="Include_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akP-qo-JrF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJx-KG-Zcs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oKa-P9-r2k" firstAttribute="bottom" secondItem="AJx-KG-Zcs" secondAttribute="bottom" id="3H6-xh-ZZ6"/>
+                            <constraint firstItem="AJx-KG-Zcs" firstAttribute="leading" secondItem="oKa-P9-r2k" secondAttribute="leading" id="skh-kP-vzX"/>
+                            <constraint firstItem="AJx-KG-Zcs" firstAttribute="top" secondItem="oKa-P9-r2k" secondAttribute="top" id="tFS-Bj-LPs"/>
+                            <constraint firstItem="oKa-P9-r2k" firstAttribute="trailing" secondItem="AJx-KG-Zcs" secondAttribute="trailing" id="zJv-IN-CcP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oKa-P9-r2k"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="AJx-KG-Zcs" id="5dp-2J-BSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUH-fr-Fhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="916"/>
+            <point key="canvasLocation" x="164" y="915.29235382308855"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aem-fT-L8V">
