@@ -7,20 +7,27 @@
 //
 
 import UIKit
+import Vision
 
 class RealTimeDetectionViewController: UIViewController {
 
     @IBOutlet weak var cameraView: UIView!
-
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
     var videoCapture: VideoCapture!
-
+    
+    let visionRequestHandler = VNSequenceRequestHandler()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.categoryLabel.text = ""
+        self.confidenceLabel.text = ""
 
-        let spec = VideoSpec(fps: 3, size: CGSize(width: 1280, height: 720))
+        let spec = VideoSpec(fps: 3, size: CGSize(width: 1920, height: 1080))
         self.videoCapture = VideoCapture(cameraType: .back, preferredSpec: spec, previewContainer: self.cameraView.layer)
         self.videoCapture.imageBufferHandler = { (imageBuffer, timestamp, outputBuffer) in
-
+            self.detectObject(image: imageBuffer)
         }
         // Do any additional setup after loading the view.
     }
@@ -40,5 +47,28 @@ class RealTimeDetectionViewController: UIViewController {
             videoCapture.stopCapture()
         }
     }
+    
+    func detectObject(image: CVImageBuffer){
+        do {
+            let vnCoreMLModel = try VNCoreMLModel(for: Inceptionv3().model)
+            let request = VNCoreMLRequest(model: vnCoreMLModel, completionHandler: self.handleObjectDetection)
+            request.imageCropAndScaleOption = .centerCrop
+            try self.visionRequestHandler.perform([request], on: image)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func handleObjectDetection(request: VNRequest, error: Error?) {
+        if let result = request.results?.first as? VNClassificationObservation {
+            DispatchQueue.main.async {
+                self.categoryLabel.text = result.identifier
+                self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
+            }
+            
+        }
+    }
+    
+    
   
 }
