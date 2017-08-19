@@ -12,6 +12,7 @@
 		14312F151F38012E0039FB43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14312F131F38012E0039FB43 /* Main.storyboard */; };
 		14312F171F38012E0039FB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14312F161F38012E0039FB43 /* Assets.xcassets */; };
 		14312F1A1F38012E0039FB43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14312F181F38012E0039FB43 /* LaunchScreen.storyboard */; };
+		1431DE0D1F48282200E6E0B9 /* FacialAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431DE0C1F48282200E6E0B9 /* FacialAnalysisViewController.swift */; };
 		1435A33F1F3ADC8600A28B53 /* MainFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */; };
 		1435A3411F3ADE8D00A28B53 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435A3401F3ADE8D00A28B53 /* SampleData.swift */; };
 		147567441F41FF210075A840 /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147567411F41FF150075A840 /* AVCaptureDevice+Extension.swift */; };
@@ -30,6 +31,7 @@
 		14312F161F38012E0039FB43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14312F191F38012E0039FB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14312F1B1F38012E0039FB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1431DE0C1F48282200E6E0B9 /* FacialAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialAnalysisViewController.swift; sourceTree = "<group>"; };
 		1435A33E1F3ADC8600A28B53 /* MainFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureCell.swift; sourceTree = "<group>"; };
 		1435A3401F3ADE8D00A28B53 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		147567411F41FF150075A840 /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				14CD8E841F38911600192D34 /* MainViewController.swift */,
 				14F5D17A1F3AFEE30076F94A /* ObjectDetectionViewController.swift */,
 				1424E8E71F41F66C00CDF8AC /* RealTimeDetectionViewController.swift */,
+				1431DE0C1F48282200E6E0B9 /* FacialAnalysisViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				1435A33F1F3ADC8600A28B53 /* MainFeatureCell.swift in Sources */,
 				1424E8E81F41F66C00CDF8AC /* RealTimeDetectionViewController.swift in Sources */,
 				14CD8E851F38911600192D34 /* MainViewController.swift in Sources */,
+				1431DE0D1F48282200E6E0B9 /* FacialAnalysisViewController.swift in Sources */,
 				147567451F41FF240075A840 /* VideoCameraType.swift in Sources */,
 				147567461F41FF270075A840 /* VideoCapture.swift in Sources */,
 				147567441F41FF210075A840 /* AVCaptureDevice+Extension.swift in Sources */,
