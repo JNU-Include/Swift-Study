@@ -226,20 +226,67 @@
             </objects>
             <point key="canvasLocation" x="164" y="915.29235382308855"/>
         </scene>
-        <!--View Controller-->
+        <!--Facial Analysis View Controller-->
         <scene sceneID="aem-fT-L8V">
             <objects>
-                <viewController id="J0B-Hv-NCg" sceneMemberID="viewController">
+                <viewController id="J0B-Hv-NCg" customClass="FacialAnalysisViewController" customModule="Include_AI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wza-FF-9hr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVN-ZW-6W8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="207"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPw-hb-7Ro">
+                                <rect key="frame" x="0.0" y="64" width="414" height="207"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tbT-sC-TEX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DC1-E1-bG2">
+                                            <rect key="frame" x="103.66666666666669" y="0.0" width="207" height="207"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="DC1-E1-bG2" secondAttribute="height" id="RLg-U6-BKO"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DC1-E1-bG2" firstAttribute="centerX" secondItem="tbT-sC-TEX" secondAttribute="centerX" id="HGi-58-LI7"/>
+                                        <constraint firstItem="DC1-E1-bG2" firstAttribute="height" secondItem="tbT-sC-TEX" secondAttribute="height" id="f58-8X-K03"/>
+                                        <constraint firstItem="DC1-E1-bG2" firstAttribute="centerY" secondItem="tbT-sC-TEX" secondAttribute="centerY" id="ykE-cf-ugY"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VG7-9T-6Iq" firstAttribute="trailing" secondItem="pVN-ZW-6W8" secondAttribute="trailing" id="2RM-k6-BF5"/>
+                            <constraint firstItem="IPw-hb-7Ro" firstAttribute="trailing" secondItem="pVN-ZW-6W8" secondAttribute="trailing" id="2nb-yk-c0t"/>
+                            <constraint firstItem="pVN-ZW-6W8" firstAttribute="height" secondItem="wza-FF-9hr" secondAttribute="width" multiplier="0.5" id="6sN-97-S3d"/>
+                            <constraint firstItem="pVN-ZW-6W8" firstAttribute="top" secondItem="VG7-9T-6Iq" secondAttribute="top" id="7Pd-Tb-Y9t"/>
+                            <constraint firstItem="pVN-ZW-6W8" firstAttribute="leading" secondItem="VG7-9T-6Iq" secondAttribute="leading" id="EsO-Ht-cPi"/>
+                            <constraint firstItem="IPw-hb-7Ro" firstAttribute="bottom" secondItem="pVN-ZW-6W8" secondAttribute="bottom" id="Oqz-8f-e6G"/>
+                            <constraint firstItem="IPw-hb-7Ro" firstAttribute="top" secondItem="pVN-ZW-6W8" secondAttribute="top" id="Qwk-3b-mPv"/>
+                            <constraint firstItem="IPw-hb-7Ro" firstAttribute="leading" secondItem="pVN-ZW-6W8" secondAttribute="leading" id="zHw-Ws-2xw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VG7-9T-6Iq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xU4-6p-XVF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="heS-As-A5g">
+                            <connections>
+                                <action selector="addPhoto:" destination="J0B-Hv-NCg" id="Xtf-M2-WHP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blurredImageView" destination="pVN-ZW-6W8" id="M3a-Ws-FA2"/>
+                        <outlet property="selectedImageView" destination="DC1-E1-bG2" id="bUH-rA-wtI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRW-WB-zd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="814"/>
+            <point key="canvasLocation" x="1086.9565217391305" y="813.58695652173924"/>
         </scene>
     </scenes>
 </document>
