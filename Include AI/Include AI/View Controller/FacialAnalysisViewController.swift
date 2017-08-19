@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Vision
 
 class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -14,6 +15,16 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         didSet {
             self.blurredImageView.image = selectedImage
             self.selectedImageView.image = selectedImage
+        }
+    }
+    
+    var selectedCiImage: CIImage? {
+        get {
+            if let selectedImage = self.selectedImage {
+                return CIImage(image: selectedImage)
+            } else {
+                return nil
+            }
         }
     }
     
@@ -59,17 +70,34 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         picker.dismiss(animated: true, completion: nil)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.selectedImage = uiImage
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.detectFaces()
+            }
+        }
+    }
+    
+    func detectFaces() {
+        if let ciImage = self.selectedCiImage {
+            let detectFaceRequest = VNDetectFaceRectanglesRequest(completionHandler: self.handleFaces)
+            let requestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+            
+            do {
+                try requestHandler.perform([detectFaceRequest])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func handleFaces(request: VNRequest, error: Error?) {
+        if let faces = request.results as? [VNFaceObservation] {
+            for face in faces {
+                print("face : \(face.boundingBox)")
+            }
         }
     }
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
