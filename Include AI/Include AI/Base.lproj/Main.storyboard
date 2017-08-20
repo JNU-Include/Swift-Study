@@ -258,6 +258,12 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-bs-eOC">
+                                <rect key="frame" x="0.0" y="283" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WTU-8F-rHb"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -268,7 +274,10 @@
                             <constraint firstItem="pVN-ZW-6W8" firstAttribute="leading" secondItem="VG7-9T-6Iq" secondAttribute="leading" id="EsO-Ht-cPi"/>
                             <constraint firstItem="IPw-hb-7Ro" firstAttribute="bottom" secondItem="pVN-ZW-6W8" secondAttribute="bottom" id="Oqz-8f-e6G"/>
                             <constraint firstItem="IPw-hb-7Ro" firstAttribute="top" secondItem="pVN-ZW-6W8" secondAttribute="top" id="Qwk-3b-mPv"/>
+                            <constraint firstItem="Dt7-bs-eOC" firstAttribute="top" secondItem="IPw-hb-7Ro" secondAttribute="bottom" constant="12" id="QxV-w0-eWa"/>
+                            <constraint firstItem="VG7-9T-6Iq" firstAttribute="trailing" secondItem="Dt7-bs-eOC" secondAttribute="trailing" id="Wup-ZE-M77"/>
                             <constraint firstItem="IPw-hb-7Ro" firstAttribute="leading" secondItem="pVN-ZW-6W8" secondAttribute="leading" id="zHw-Ws-2xw"/>
+                            <constraint firstItem="Dt7-bs-eOC" firstAttribute="leading" secondItem="VG7-9T-6Iq" secondAttribute="leading" id="zIb-GF-Hk9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VG7-9T-6Iq"/>
                     </view>
@@ -281,6 +290,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blurredImageView" destination="pVN-ZW-6W8" id="M3a-Ws-FA2"/>
+                        <outlet property="facesScrollView" destination="Dt7-bs-eOC" id="Psd-SN-C7T"/>
                         <outlet property="selectedImageView" destination="DC1-E1-bG2" id="bUH-rA-wtI"/>
                     </connections>
                 </viewController>
